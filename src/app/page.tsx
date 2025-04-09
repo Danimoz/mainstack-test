@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { getBalances, getTransactions } from "@/lib/queries";
 import { Suspense } from "react";
-import { BalanceDetails, } from "@/components/balance-info";
+import { BalanceDetails } from "@/components/balance-info";
 import TransactionChart from "@/components/line-chart";
 import { ChevronDown, Download } from "lucide-react";
 import { TransactionList } from "@/components/transaction-list";
@@ -68,7 +68,9 @@ export default async function Home() {
             </Button>
           </div>
         </div>
-        <TransactionList transactions={transactions} />
+        <Suspense fallback={<p>Loading...</p>}>
+          <TransactionList transactions={transactions} />
+        </Suspense>
       </section>
     </main >
   );
