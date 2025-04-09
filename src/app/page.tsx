@@ -12,6 +12,10 @@ export default async function Home() {
   const transactions = await getTransactions()
   const balances = await getBalances()
 
+  if (!transactions || !balances) {
+    return <p>Can't fetch, try again</p>;
+  }
+
   return (
     <main className="pt-20">
       <section className="container mx-auto grid grid-cols-[75%_25%] gap-8">
