@@ -13,7 +13,7 @@ export default async function Home() {
   const balances = await getBalances()
 
   if (!transactions || !balances) {
-    return <p>Can't fetch, try again</p>;
+    return <p>Can&apos;t fetch, try again</p>;
   }
 
   return (
