@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { Button } from './ui/button';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
 import { ChevronDown } from 'lucide-react';
 import { Calendar } from './ui/calendar';
